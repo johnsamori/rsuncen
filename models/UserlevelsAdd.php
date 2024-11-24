@@ -907,7 +907,7 @@ class UserlevelsAdd extends Userlevels
             $this->ID->EditValue = $this->ID->CurrentValue;
             $this->ID->PlaceHolder = RemoveHtml($this->ID->caption());
             if (strval($this->ID->EditValue) != "" && is_numeric($this->ID->EditValue)) {
-                $this->ID->EditValue = FormatNumber($this->ID->EditValue, null);
+                $this->ID->EditValue = FormatNumber($this->ID->EditValue, $this->ID->formatPattern());
             }
 
             // Name

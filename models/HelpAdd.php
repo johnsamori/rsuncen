@@ -1093,7 +1093,7 @@ class HelpAdd extends Help
             $this->Order->EditValue = $this->Order->CurrentValue;
             $this->Order->PlaceHolder = RemoveHtml($this->Order->caption());
             if (strval($this->Order->EditValue) != "" && is_numeric($this->Order->EditValue)) {
-                $this->Order->EditValue = FormatNumber($this->Order->EditValue, null);
+                $this->Order->EditValue = FormatNumber($this->Order->EditValue, $this->Order->formatPattern());
             }
 
             // Display_in_Page

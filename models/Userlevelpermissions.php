@@ -1209,7 +1209,7 @@ class Userlevelpermissions extends DbTable
         $this->_Permission->EditValue = $this->_Permission->CurrentValue;
         $this->_Permission->PlaceHolder = RemoveHtml($this->_Permission->caption());
         if (strval($this->_Permission->EditValue) != "" && is_numeric($this->_Permission->EditValue)) {
-            $this->_Permission->EditValue = FormatNumber($this->_Permission->EditValue, null);
+            $this->_Permission->EditValue = FormatNumber($this->_Permission->EditValue, $this->_Permission->formatPattern());
         }
 
         // Call Row Rendered event

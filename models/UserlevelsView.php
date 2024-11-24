@@ -767,7 +767,7 @@ class UserlevelsView extends Userlevels
         $detailFilter = $detailTbl->applyUserIDFilters($detailFilter);
         $detailTbl->Count = $detailTbl->loadRecordCount($detailFilter);
         if (!$this->ShowMultipleDetails && Container("users")->Count > 0) { // Skip record count if show multiple details, added Container("users")->Count > 0 by Masino Sinaga, September 16, 2023) { // Skip record count if show multiple details
-            $body .= "&nbsp;" . sprintf($this->language->phrase("DetailCount"), "navy", Container("users")->Count);
+            $body .= "&nbsp;" . sprintf($this->language->phrase("DetailCount"), "olive", Container("users")->Count);
         }
         $body = "<a class=\"btn btn-default ew-row-link ew-detail\" data-action=\"list\" href=\"" . HtmlEncode(GetUrl("userslist?" . Config("TABLE_SHOW_MASTER") . "=userlevels&" . GetForeignKeyUrl("fk_ID", $this->ID->CurrentValue) . "")) . "\">" . $body . "</a>";
         $links = "";

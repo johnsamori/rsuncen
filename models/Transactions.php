@@ -1271,7 +1271,7 @@ class Transactions extends DbTable
         $this->patient_id->EditValue = $this->patient_id->CurrentValue;
         $this->patient_id->PlaceHolder = RemoveHtml($this->patient_id->caption());
         if (strval($this->patient_id->EditValue) != "" && is_numeric($this->patient_id->EditValue)) {
-            $this->patient_id->EditValue = FormatNumber($this->patient_id->EditValue, null);
+            $this->patient_id->EditValue = FormatNumber($this->patient_id->EditValue, $this->patient_id->formatPattern());
         }
 
         // pharmacy_id
@@ -1279,7 +1279,7 @@ class Transactions extends DbTable
         $this->pharmacy_id->EditValue = $this->pharmacy_id->CurrentValue;
         $this->pharmacy_id->PlaceHolder = RemoveHtml($this->pharmacy_id->caption());
         if (strval($this->pharmacy_id->EditValue) != "" && is_numeric($this->pharmacy_id->EditValue)) {
-            $this->pharmacy_id->EditValue = FormatNumber($this->pharmacy_id->EditValue, null);
+            $this->pharmacy_id->EditValue = FormatNumber($this->pharmacy_id->EditValue, $this->pharmacy_id->formatPattern());
         }
 
         // quantity
@@ -1287,7 +1287,7 @@ class Transactions extends DbTable
         $this->quantity->EditValue = $this->quantity->CurrentValue;
         $this->quantity->PlaceHolder = RemoveHtml($this->quantity->caption());
         if (strval($this->quantity->EditValue) != "" && is_numeric($this->quantity->EditValue)) {
-            $this->quantity->EditValue = FormatNumber($this->quantity->EditValue, null);
+            $this->quantity->EditValue = FormatNumber($this->quantity->EditValue, $this->quantity->formatPattern());
         }
 
         // total_price
@@ -1295,7 +1295,7 @@ class Transactions extends DbTable
         $this->total_price->EditValue = $this->total_price->CurrentValue;
         $this->total_price->PlaceHolder = RemoveHtml($this->total_price->caption());
         if (strval($this->total_price->EditValue) != "" && is_numeric($this->total_price->EditValue)) {
-            $this->total_price->EditValue = FormatNumber($this->total_price->EditValue, null);
+            $this->total_price->EditValue = FormatNumber($this->total_price->EditValue, $this->total_price->formatPattern());
         }
 
         // transaction_date

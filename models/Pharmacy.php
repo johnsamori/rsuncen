@@ -1239,7 +1239,7 @@ class Pharmacy extends DbTable
         $this->stock->EditValue = $this->stock->CurrentValue;
         $this->stock->PlaceHolder = RemoveHtml($this->stock->caption());
         if (strval($this->stock->EditValue) != "" && is_numeric($this->stock->EditValue)) {
-            $this->stock->EditValue = FormatNumber($this->stock->EditValue, null);
+            $this->stock->EditValue = FormatNumber($this->stock->EditValue, $this->stock->formatPattern());
         }
 
         // price
@@ -1247,7 +1247,7 @@ class Pharmacy extends DbTable
         $this->price->EditValue = $this->price->CurrentValue;
         $this->price->PlaceHolder = RemoveHtml($this->price->caption());
         if (strval($this->price->EditValue) != "" && is_numeric($this->price->EditValue)) {
-            $this->price->EditValue = FormatNumber($this->price->EditValue, null);
+            $this->price->EditValue = FormatNumber($this->price->EditValue, $this->price->formatPattern());
         }
 
         // Call Row Rendered event

@@ -978,7 +978,7 @@ class HospitalizationAdd extends Hospitalization
             $this->total_cost->EditValue = $this->total_cost->CurrentValue;
             $this->total_cost->PlaceHolder = RemoveHtml($this->total_cost->caption());
             if (strval($this->total_cost->EditValue) != "" && is_numeric($this->total_cost->EditValue)) {
-                $this->total_cost->EditValue = FormatNumber($this->total_cost->EditValue, null);
+                $this->total_cost->EditValue = FormatNumber($this->total_cost->EditValue, $this->total_cost->formatPattern());
             }
 
             // Add refer script

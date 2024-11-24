@@ -1497,7 +1497,7 @@ class UserlevelsList extends Userlevels
                 $detailFilter = $detailTbl->applyUserIDFilters($detailFilter);
                 $detailTbl->Count = $detailTbl->loadRecordCount($detailFilter);
 				if (Container("users")->Count > 0) // Display if > 0 added by Masino Sinaga, September 16, 2023
-					$body .= "&nbsp;" . sprintf($this->language->phrase("DetailCount"), "navy", Container("users")->Count);
+					$body .= "&nbsp;" . sprintf($this->language->phrase("DetailCount"), "olive", Container("users")->Count);
             }
             $body = "<a class=\"btn btn-default ew-row-link ew-detail" . ($this->ListOptions->UseDropDownButton ? " dropdown-toggle" : "") . "\" data-action=\"list\" href=\"" . HtmlEncode("userslist?" . Config("TABLE_SHOW_MASTER") . "=userlevels&" . GetForeignKeyUrl("fk_ID", $this->ID->CurrentValue) . "") . "\">" . $body . "</a>";
             $links = "";
@@ -1599,7 +1599,7 @@ class UserlevelsList extends Userlevels
                     $detailTbl->Count = $detailTbl->loadRecordCount($detailFilter);
                 }
                 $detailFilters[$detailTbl->TableVar] = $detailFilter;
-                $label .= "&nbsp;" . JsEncode(sprintf($this->language->phrase("DetailCount"), "navy", $detailTbl->Count));
+                $label .= "&nbsp;" . JsEncode(sprintf($this->language->phrase("DetailCount"), "olive", $detailTbl->Count));
                 $url .= "&detailfilters=%f";
                 $link = "<button class=\"nav-link\" data-bs-toggle=\"tab\" data-table=\"users\" data-url=\"" . $url . "\" type=\"button\" role=\"tab\" aria-selected=\"false\">" . $label . "</button>";
                 $detaillnk = GetUrl("userslist?" . Config("TABLE_SHOW_MASTER") . "=userlevels");

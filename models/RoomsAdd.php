@@ -875,7 +875,7 @@ class RoomsAdd extends Rooms
             $this->price_per_day->EditValue = $this->price_per_day->CurrentValue;
             $this->price_per_day->PlaceHolder = RemoveHtml($this->price_per_day->caption());
             if (strval($this->price_per_day->EditValue) != "" && is_numeric($this->price_per_day->EditValue)) {
-                $this->price_per_day->EditValue = FormatNumber($this->price_per_day->EditValue, null);
+                $this->price_per_day->EditValue = FormatNumber($this->price_per_day->EditValue, $this->price_per_day->formatPattern());
             }
 
             // status

@@ -153,8 +153,8 @@ $CONFIG = [
     "LAZY_LOAD" => true, // Lazy loading of images
     "BODY_CLASS" => "hold-transition layout-fixed layout-navbar-fixed sidebar-mini", // CSS class(es) for <body> tag
     "BODY_STYLE" => "", // CSS style for <body> tag
-    "SIDEBAR_CLASS" => "main-sidebar sidebar-dark-navy elevation-4", // CSS class(es) for sidebar
-    "NAVBAR_CLASS" => "main-header navbar navbar-expand navbar-navy navbar-dark border-bottom-0", // CSS class(es) for navbar
+    "SIDEBAR_CLASS" => "main-sidebar sidebar-dark-olive elevation-4", // CSS class(es) for sidebar
+    "NAVBAR_CLASS" => "main-header navbar navbar-expand navbar-olive navbar-dark border-bottom-0", // CSS class(es) for navbar
     "CLASS_PREFIX" => "_", // Prefix for invalid CSS class names
     "USE_JAVASCRIPT_MESSAGE" => true, // Use JavaScript message (toast)
 	"MS_USE_MESSAGE_BOX_INSTEAD_OF_TOAST" => false, // Use Alertify message box, make sure USE_JAVASCRIPT_MESSAGE always set to true!
@@ -599,7 +599,7 @@ $CONFIG = [
     "API_CHAT_ACTION" => "chat", // API chat action
 
     // List page inline/grid/modal settings
-    "USE_AJAX_ACTIONS" => false,
+    "USE_AJAX_ACTIONS" => true,
 
     // Send push notification time limit
     "SEND_PUSH_NOTIFICATION_TIME_LIMIT" => 300,

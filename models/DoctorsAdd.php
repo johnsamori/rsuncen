@@ -849,7 +849,7 @@ class DoctorsAdd extends Doctors
             $this->user_id->EditValue = $this->user_id->CurrentValue;
             $this->user_id->PlaceHolder = RemoveHtml($this->user_id->caption());
             if (strval($this->user_id->EditValue) != "" && is_numeric($this->user_id->EditValue)) {
-                $this->user_id->EditValue = FormatNumber($this->user_id->EditValue, null);
+                $this->user_id->EditValue = FormatNumber($this->user_id->EditValue, $this->user_id->formatPattern());
             }
 
             // full_name

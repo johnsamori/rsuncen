@@ -816,7 +816,7 @@ class UserlevelpermissionsAdd extends Userlevelpermissions
             $this->UserLevelID->EditValue = $this->UserLevelID->CurrentValue;
             $this->UserLevelID->PlaceHolder = RemoveHtml($this->UserLevelID->caption());
             if (strval($this->UserLevelID->EditValue) != "" && is_numeric($this->UserLevelID->EditValue)) {
-                $this->UserLevelID->EditValue = FormatNumber($this->UserLevelID->EditValue, null);
+                $this->UserLevelID->EditValue = FormatNumber($this->UserLevelID->EditValue, $this->UserLevelID->formatPattern());
             }
 
             // TableName
@@ -832,7 +832,7 @@ class UserlevelpermissionsAdd extends Userlevelpermissions
             $this->_Permission->EditValue = $this->_Permission->CurrentValue;
             $this->_Permission->PlaceHolder = RemoveHtml($this->_Permission->caption());
             if (strval($this->_Permission->EditValue) != "" && is_numeric($this->_Permission->EditValue)) {
-                $this->_Permission->EditValue = FormatNumber($this->_Permission->EditValue, null);
+                $this->_Permission->EditValue = FormatNumber($this->_Permission->EditValue, $this->_Permission->formatPattern());
             }
 
             // Add refer script

@@ -2274,7 +2274,7 @@ class Users extends DbTable
             $this->ReportsTo->EditValue = $this->ReportsTo->CurrentValue;
             $this->ReportsTo->PlaceHolder = RemoveHtml($this->ReportsTo->caption());
             if (strval($this->ReportsTo->EditValue) != "" && is_numeric($this->ReportsTo->EditValue)) {
-                $this->ReportsTo->EditValue = FormatNumber($this->ReportsTo->EditValue, null);
+                $this->ReportsTo->EditValue = FormatNumber($this->ReportsTo->EditValue, $this->ReportsTo->formatPattern());
             }
         }
 
