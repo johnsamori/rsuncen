@@ -1,0 +1,11 @@
+{
+    "name": "rsuncen2025",
+    "version": "25.2.1",
+    "description": "rsuncen2025",
+    "license": "SEE LICENSE IN LICENSE.md",
+    "private": true,
+    "dependencies": {},
+    "engines": {
+        "node": ">=18"
+    }
+}
